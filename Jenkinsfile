@@ -10,10 +10,13 @@ pipeline {
     stages {
 
         stage('Checkout Code') {
-            steps {
-                git branch: 'main', url: 'https://github.com/Sujata2211/nextapp.git'
-            }
-        }
+    steps {
+        git branch: 'main', 
+            credentialsId: 'github_creds',
+            url: 'https://github.com/Sujata2211/nextapp.git'
+    }
+}
+
 
         stage('Build Docker Image') {
             steps {
