@@ -4,14 +4,14 @@ pipeline {
     environment {
         DOCKER_IMAGE = "sujata658/my-nextjs-app"
         EC2_USER = "ubuntu"
-        EC2_HOST = "YOUR_EC2_PUBLIC_IP"   // replace this
+        EC2_HOST = "43.204.24.3"   // replace this
     }
 
     stages {
 
         stage('Checkout Code') {
             steps {
-                git branch: 'main', url: 'https://github.com/YOUR_GITHUB_USER/YOUR_REPO.git'
+                git branch: 'main', url: 'https://github.com/Sujata2211/nextapp.git'
             }
         }
 
