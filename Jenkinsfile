@@ -1,7 +1,13 @@
-pipeline {
-    agent any
+#!/usr/bin/env groovy
 
-    environment {
+pipeline {
+  agent any
+  options {
+    durabilityHint('PERFORMANCE_OPTIMIZED')
+  }
+  environment {
+    SHELL = "/bin/bash"
+  }
         DOCKER_IMAGE = "sujata658/my-nextjs-app"
         EC2_USER = "ubuntu"
         EC2_HOST = "43.204.24.3"   // replace this
